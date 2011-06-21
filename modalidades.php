@@ -1,32 +1,10 @@
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Modalidades</title>
-  </head>
+
 <?php
   require 'banco.php';
+  include '/includes/header.php';
   $Banco->query("SELECT * FROM alunos;");
   $modalidades = $Banco->query("SELECT * FROM modalidades;");
 ?>
-  <div class="header">
-    <ul id="nav">
-      <li>
-	<a href="index.php">Home</a>
-      </li>
-      <li>
-        <a href="alunos.php">Alunos</a>
-      </li>
-      <li>
-        <a href="turmas.php">Turmas</a>
-      </li>
-      <li>
-        <a href="modalidades.php">Modalidades</a>
-      </li>
-      <li>
-        <a href="professores.php">Professores</a>
-      </li>
-    </ul>
-  </div>
   <div id="modalidades">
     <h2>Modalidades</h2>
     <table>
@@ -45,6 +23,8 @@
       </tr>
 <?php endforeach; ?>
     </table>
-    <a href="cad_modalidade.php">Cadastrar uma Modalidade</a>
+    <a class="new" href="cad_modalidade.php">Cadastrar uma Modalidade</a>
   </div>
-</html>
+<?php
+  include '/includes/footer.php';
+?>

@@ -1,6 +1,7 @@
 <?php
   $codigo = $_GET['codigo'];
   require 'banco.php';
+  include '/includes/header.php';
   $professor = $Banco->query("SELECT * FROM professores WHERE CODPROFESSOR = '{$codigo}';");
   $professor = $professor[0];
   
@@ -13,11 +14,6 @@ if(count($_POST) > 0){
 
 ?>
 
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Cadastro de Professores</title>
-  </head>
   <h2>Cadastro de Professores</h2>
   <div id="resposta" class="sucesso">Deu certo</div>
   <form id="cad_professor" action="?codigo=<?php echo $codigo; ?>" method="post">
@@ -26,5 +22,7 @@ if(count($_POST) > 0){
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+<?php
+  include '/includes/footer.php';
+?>
 

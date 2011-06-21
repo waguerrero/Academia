@@ -1,5 +1,6 @@
 <?php
   require 'banco.php';
+  include '/includes/header.php';
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO alunos (NOME, ENDERECO, TELEFONE) VALUES ('{$nome}', '{$endereco}', '{$telefone}');", 'write');
@@ -8,12 +9,6 @@ if(count($_POST) > 0){
 
 ?>
 
-
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Cadastro de Alunos</title>
-  </head>
   <h2>Cadastro de Alunos</h2>
   <div id="resposta" class="sucesso">Deu certo</div>
   <form id="cad_aluno" action="?" method="post">
@@ -26,4 +21,7 @@ if(count($_POST) > 0){
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+  
+<?php
+  include '/includes/footer.php';
+?>

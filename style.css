@@ -1,0 +1,101 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img, fieldset { border: 0; }
+
+a {
+  color: #900;
+}
+
+ul {}
+  ul li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+html {
+  background: #F7F7F7;
+}
+body {
+  width: 800px;
+  text-align: center;
+  font: normal 13px sans-serif;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table tr th {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+table td {
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+}
+table td img {
+  width: 20px;
+}
+table td, th {
+  padding: 4px;
+}
+table tr:hover td {
+  background: #FFC;
+}
+#nav {
+  border: 1px solid #CCC;
+  border-top-width: 0;
+  background: #EEE;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 120%;
+  overflow: hidden;
+}
+#nav li {
+  margin: 0 46px;
+  float: left;
+}
+h2 {
+  margin-bottom: 30px;
+  font-size: 250%;
+  font-weight: normal;
+  color: #999;
+  text-transform: lowercase;
+}
+.new {
+  margin-top: 15px;
+  text-align: left;
+  color: #9C0;
+  display: block;
+}
+form {
+  border-radius: 5px;
+  background: #EEE;
+  padding: 15px;
+  overflow: hidden;
+}
+label {
+  width: 100px;
+  margin-right: 20px !important;
+  font-weight: bold;
+  text-align: right;
+  clear: both;
+}
+label, input, select {
+  margin: 5px 0;
+  display: block;
+  float: left;
+}
+input {
+  border: 1px solid #CCC;
+  padding: 5px;
+}
+button {
+  margin-left: 120px;
+  padding: 5px 15px;
+  float: left;
+  clear: both;
+}

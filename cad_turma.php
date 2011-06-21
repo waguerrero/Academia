@@ -1,5 +1,6 @@
 <?php
   require 'banco.php';
+  include '/includes/header.php';
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO turmas (DESCRICAO, CODDIA, HORA_INICIO, HORA_TERMINO, MAX_VAGAS, CODMODALIDADE, CODPROFESSOR) VALUES ('{$descricao}', '{$coddia}', '{$hora_inicio}', '{$hora_termino}', '{$max_vagas}', '{$codmodalidade}', '{$codprofessor}');", 'write');
@@ -12,13 +13,7 @@ $professores=$Banco->query("SELECT * FROM professores");
 echo mysql_error();
 ?>
 
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Cadastro de Turmas</title>
-  </head>
   <h2>Cadastro de Turmas</h2>
-  <div id="resposta" class="sucesso">Deu certo</div>
   <form id="cad_turma" action="?" method="post">
     <label>Descrição</label>
     <input type="text" name="descricao" required="true" />
@@ -49,4 +44,6 @@ echo mysql_error();
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+<?php
+  include '/includes/footer.php';
+?>

@@ -1,32 +1,10 @@
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Alunos</title>
-  </head>
+
   <?php
     require 'banco.php';
+    include '/includes/header.php';
     $Banco->query("SELECT * FROM alunos;");
     $alunos = $Banco->query("SELECT * FROM alunos;");
   ?>
-  <div class="header">
-    <ul id="nav">
-      <li>
-	<a href="index.php">Home</a>
-      </li>
-      <li>
-        <a href="alunos.php">Alunos</a>
-      </li>
-      <li>
-        <a href="turmas.php">Turmas</a>
-      </li>
-      <li>
-        <a href="modalidades.php">Modalidades</a>
-      </li>
-      <li>
-        <a href="professores.php">Professores</a>
-      </li>
-    </ul>
-  </div>
   <div id="alunos">
     <h2>Alunos</h2>
     <table>
@@ -50,5 +28,7 @@
       </tr>
 <?php endforeach; ?>
     </table>
-    <a href="cad_aluno.php">Cadastrar um Aluno</a>
-</html>
+    <a class="new" href="cad_aluno.php">Cadastrar um Aluno</a>
+<?php
+  include '/includes/footer.php';
+?>

@@ -1,10 +1,7 @@
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Turmas</title>
-  </head>
+
   <?php
     require 'banco.php';
+    include '/includes/header.php';
     $turmas = $Banco->query("
 SELECT 
   turmas.*, 
@@ -20,25 +17,7 @@ FROM
   JOIN dias_semana
     ON (turmas.CODDIA = dias_semana.CODDIA);");
   ?>
-  <div class="header">
-    <ul id="nav">
-      <li>
-	<a href="index.php">Home</a>
-      </li>
-      <li>
-        <a href="alunos.php">Alunos</a>
-      </li>
-      <li>
-        <a href="turmas.php">Turmas</a>
-      </li>
-      <li>
-        <a href="modalidades.php">Modalidades</a>
-      </li>
-      <li>
-        <a href="professores.php">Professores</a>
-      </li>
-    </ul>
-  </div>
+  
   <div id="turmas">
     <h2>Turmas</h2>
     <table>
@@ -65,6 +44,8 @@ FROM
       </tr>
 <?php endforeach; ?>
     </table>
-    <a href="cad_turma.php">Cadastrar uma Turma</a>
+    <a class="new" href="cad_turma.php">Cadastrar uma Turma</a>
   </div>
-</html>
+<?php
+  include '/includes/footer.php';
+?>

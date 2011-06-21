@@ -1,5 +1,6 @@
 <?php
   require 'banco.php';
+  include '/includes/header.php';
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO modalidades (DESCRICAO, MENSALIDADE_BASE) VALUES ('{$descricao}', {$mensalidade_base});", 'write');
@@ -8,13 +9,8 @@ if(count($_POST) > 0){
 
 ?>
 
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Cadastro de Modalidades</title>
-  </head>
-  <h2>Cadastro de Modalidades</h2>
-  <div id="resposta" class="sucesso">Deu certo</div>
+
+  <h2>Nova Modalidade</h2>
   <form id="cad_modalidade" action="?" method="post">
     <label>Descrição</label>
     <input type="text" name="descricao"></input>
@@ -23,4 +19,7 @@ if(count($_POST) > 0){
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+
+<?php
+  include '/includes/footer.php';
+?>

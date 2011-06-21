@@ -1,6 +1,7 @@
 <?php
   $codigo = $_GET['codigo'];
   require 'banco.php';
+  include '/includes/header.php';
   $aluno = $Banco->query("SELECT * FROM alunos WHERE CODALUNO = '{$codigo}';");
   $aluno = $aluno[0];
   
@@ -31,4 +32,6 @@ if(count($_POST) > 0){
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+<?php
+  include '/includes/footer.php';
+?>

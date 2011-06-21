@@ -1,6 +1,7 @@
 <?php
   $codigo = $_GET['codigo'];
   require 'banco.php';
+  include '/includes/header.php';
   $turma = $Banco->query("SELECT * FROM turmas WHERE CODTURMA = '{$codigo}';");
   $turma = $turma[0];
   
@@ -19,11 +20,6 @@ echo mysql_error();
 
 ?>
 
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Cadastro de Turmas</title>
-  </head>
   <h2>Cadastro de Turmas</h2>
   <div id="resposta" class="sucesso">Deu certo</div>
   <form id="cad_turma" action="?codigo=<?php echo $codigo; ?>" method="post">
@@ -56,4 +52,6 @@ echo mysql_error();
     <button>Enviar</button>
   </form>
   <a href="index.php">voltar</a>
-</html>
+<?php
+  include '/includes/footer.php';
+?>
