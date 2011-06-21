@@ -23,6 +23,9 @@
       <li>
 	<a href="professores.php">Professores</a>
       </li>
+      <li>
+	<a href="faturas.php">Faturas</a>
+      </li>
     </ul>
   </div>
 </html>
