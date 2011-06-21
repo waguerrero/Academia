@@ -22,7 +22,7 @@ if(is_array($alunos)) foreach($alunos as $aluno){
       $Banco->query("UPDATE faturas SET VALOR = {$total} WHERE CODFATURA = {$fatura[0]['CODFATURA']};");
     }
   } else {
-    $Banco->query("INSERT INTO faturas (CODALUNO, DATA_VENC, VALOR) VALUES ({$aluno['CODALUNO']}, '{$vencimento}', $total)", 'write');
+    $Banco->query("INSERT INTO faturas (CODALUNO, DATA_VENC, VALOR, REFERENCIA) VALUES ({$aluno['CODALUNO']}, '{$vencimento}', {$total}, '{$hoje}')", 'write');
   }
 }
 
