@@ -4,7 +4,7 @@
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO professores (nome) VALUES ('{$nome}');", 'write');
-  header("Location: index.php");
+  header("Location: professores.php");
 }
 
 ?>

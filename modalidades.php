@@ -13,7 +13,7 @@
         <th>Descrição</th>
         <th>Mensalidade</th>
       </tr>
-<?php foreach($modalidades as $modalidade): ?>
+<?php if ($modalidades != 0) foreach($modalidades as $modalidade): ?>
       <tr>
         <td><?php echo $modalidade['CODMODALIDADE']; ?></td>
         <td><?php echo $modalidade['DESCRICAO']; ?></td>

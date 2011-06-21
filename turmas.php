@@ -30,12 +30,12 @@ FROM
         <th>Modalidade</th>
         <th>Professor</th>
       </tr>
-<?php foreach($turmas as $turma): ?>
+<?php if ($turmas != 0) foreach($turmas as $turma): ?>
       <tr>
         <td><?php echo $turma['CODTURMA']; ?></td>
         <td><?php echo $turma['DESCRICAO']; ?></td>
         <td><?php echo $turma['DIA_COD']; ?></td>
-        <td><?php echo $turma['HORA_INICIO']; ?>as<?php echo $turma['HORA_TERMINO']; ?></td>
+        <td><?php echo $turma['HORA_INICIO']; ?></td>
         <td><?php echo $turma['MAX_VAGAS']; ?></td>
         <td><?php echo $turma['MOD_DESCRICAO']; ?></td>
         <td><?php echo $turma['PROFESSOR_NOME']; ?></td>

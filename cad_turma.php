@@ -4,7 +4,7 @@
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO turmas (DESCRICAO, CODDIA, HORA_INICIO, HORA_TERMINO, MAX_VAGAS, CODMODALIDADE, CODPROFESSOR) VALUES ('{$descricao}', '{$coddia}', '{$hora_inicio}', '{$hora_termino}', '{$max_vagas}', '{$codmodalidade}', '{$codprofessor}');", 'write');
-  header("Location: index.php");
+  header("Location: turmas.php");
 }
 $dias=$Banco->query("SELECT * FROM dias_semana");
 $modalidades=$Banco->query("SELECT * FROM modalidades");
@@ -23,9 +23,9 @@ echo mysql_error();
       <option value="<?php echo $dia['CODDIA']; ?>"><?php echo $dia['DESCRICAO']; ?></option>
 <?php endforeach; ?>
     </select>
-    <label>Horario</label>
+    <label>H. Início</label>
     <input name="hora_inicio" required="true"></input>
-    ás
+    <label>H. Término</label>
     <input name="hora_termino" required="true"></input>
     <label>Maximo de vagas</label>
     <input type="number" name="max_vagas" required="true" min="1" />

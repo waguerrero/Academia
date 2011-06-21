@@ -12,7 +12,7 @@
         <th>Codigo</th>
         <th>Nome</th>
       </tr>
-<?php foreach($professores as $professor): ?>
+<?php if ($professores != 0) foreach($professores as $professor): ?>
       <tr>
         <td><?php echo $professor['CODPROFESSOR']; ?></td>
         <td><?php echo $professor['NOME']; ?></td>

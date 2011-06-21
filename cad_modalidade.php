@@ -4,7 +4,7 @@
 if(count($_POST) > 0){
   extract($_POST);
   $Banco->query("INSERT INTO modalidades (DESCRICAO, MENSALIDADE_BASE) VALUES ('{$descricao}', {$mensalidade_base});", 'write');
-  header("Location: index.php");
+  header("Location: modalidades.php");
 }
 
 ?>

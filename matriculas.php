@@ -25,7 +25,7 @@
         <td><?php echo $turma[0]['DESCRICAO']; ?></td>
         <td><?php echo $matricula['DATA_INICIO']; ?></td>
         <td><?php echo $matricula['DATA_TERMINO']; ?></td>
-        <td><a href="excluir_matricula.php?codigo=<?php echo $matricula['CODMATRICULA']; ?>">delete</a></td>
+        <td><a href="excluir_matricula.php?codigo=<?php echo $matricula['CODMATRICULA'].'&aluno='.$codigo; ?>">delete</a></td>
       </tr>
 <?php endforeach; ?>
     </table>
