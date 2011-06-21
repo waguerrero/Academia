@@ -7,7 +7,7 @@ class Banco{
   var $database = array(
     'host' => '127.0.0.1',
 		'login' => 'root',
-		'password' => 'wag1604',
+		'password' => '',
 		'database' => 'academia',
   );
   
@@ -42,6 +42,12 @@ class Banco{
     }
   }
   
+}
+
+function pr($array){
+  echo '<pre>';
+  print_r($array);
+  echo '</pre>';
 }
 
 ?>
